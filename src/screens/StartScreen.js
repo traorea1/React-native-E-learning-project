@@ -4,26 +4,29 @@ import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import Paragraph from '../components/Paragraph'
+import { useState } from 'react'
+// obtenir le nom depuis la page enregistrement et l'afficher ici. 
 
 export default function StartScreen({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Login Template</Header>
+      <Header>Enew - Learning</Header>
       <Paragraph>
-        The easiest way to start with your amazing application.
+        Notre mission: Mise en place d'un apprentissage par étudiant.
       </Paragraph>
       <Button
         mode="contained"
         onPress={() => navigation.navigate('LoginScreen')}
       >
-        Login
+        Connexion
       </Button>
       <Button
         mode="outlined"
+        //onPress={() => navigation.navigate('RegisterScreen')}
         onPress={() => navigation.navigate('RegisterScreen')}
       >
-        Sign Up
+        Enregistrement
       </Button>
     </Background>
   )

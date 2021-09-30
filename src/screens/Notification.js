@@ -6,13 +6,13 @@ import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
 
 
-export default function Dashboard({ navigation, route }) {
+export default function Notification({ navigation, route }) {
   return (
     <Background>
       <Logo />
       <Header>Let’s start</Header>
       <Paragraph>
-        Your amazing app starts here. Open you favorite code editor and start
+        Your amazing app starts here. "Notification" Open you favorite code editor and start
         editing this project.
       </Paragraph>
       <Button

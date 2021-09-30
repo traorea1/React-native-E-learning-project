@@ -10,6 +10,7 @@ import BackButton from '../components/BackButton'
 import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
+import Paragraph from '../components/Paragraph'
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
@@ -33,7 +34,8 @@ export default function LoginScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Welcome back.</Header>
+      <Header>Bon retour</Header>
+      <Paragraph>Veuillez renseigner vos inforations de connexion</Paragraph>
       <TextInput
         label="Email"
         returnKeyType="next"
@@ -59,16 +61,16 @@ export default function LoginScreen({ navigation }) {
         <TouchableOpacity
           onPress={() => navigation.navigate('ResetPasswordScreen')}
         >
-          <Text style={styles.forgot}>Forgot your password?</Text>
+          <Text style={styles.forgot}>Mot de passe oubliée (...)</Text>
         </TouchableOpacity>
       </View>
       <Button mode="contained" onPress={onLoginPressed}>
-        Login
+        Connexion
       </Button>
       <View style={styles.row}>
-        <Text>Don’t have an account? </Text>
+        <Text>Pen encore enregistrée </Text>
         <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
-          <Text style={styles.link}>Sign up</Text>
+          <Text style={styles.link}>Créer un compte</Text>
         </TouchableOpacity>
       </View>
     </Background>
